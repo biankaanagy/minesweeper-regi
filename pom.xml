@@ -6,7 +6,7 @@
 
     <groupId>hu.unideb.inf</groupId>
     <artifactId>minesweeper</artifactId>
-    <version>1.0-</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
     <description></description>
 
@@ -78,6 +78,11 @@
             <artifactId>ignite-guice</artifactId>
             <version>1.2.0</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.11</version>
         </dependency>
     </dependencies>
     <build>
