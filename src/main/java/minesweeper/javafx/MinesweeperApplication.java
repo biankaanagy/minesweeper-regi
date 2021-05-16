@@ -40,8 +40,9 @@ public class MinesweeperApplication extends Application {
     public void start(Stage stage) throws Exception {
         //Logger.info("Starting application");
         //context.init();
-        fxmlLoader.setLocation(getClass().getResource("/fxml/opening.fxml"));
-        Parent root = fxmlLoader.load();
+        //fxmlLoader.setLocation(getClass().getResource("/fxml/opening.fxml"));
+        //Parent root = fxmlLoader.load();
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/opening.fxml"));
         stage.setTitle("Minesweeper");
         stage.setResizable(false);
         stage.setScene(new Scene(root));

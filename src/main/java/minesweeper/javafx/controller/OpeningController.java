@@ -26,17 +26,24 @@ public class OpeningController {
     @FXML
     private Label errorLabel;
 
+    @FXML
     public void startAction(ActionEvent actionEvent) throws IOException {
         if (playerNameTextField.getText().isEmpty()) {
             errorLabel.setText("Please enter your name!");
         } else {
-            fxmlLoader.setLocation(getClass().getResource("/fxml/game.fxml"));
-            Parent root = fxmlLoader.load();
+            //fxmlLoader.setLocation(getClass().getResource("/fxml/game.fxml"));
+            //Parent root = fxmlLoader.load();
+            Parent root1 = FXMLLoader.load(getClass().getResource("/fxml/game.fxml"));
             fxmlLoader.<GameController>getController().setPlayerName(playerNameTextField.getText());
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
+            stage.setScene(new Scene(root1));
             stage.show();
-            Logger.info("The user's name is set to {}, loading game scene", playerNameTextField.getText()); // TODO
+            //Logger.info("The user's name is set to {}, loading game scene", playerNameTextField.getText()); // TODO
+            /*Parent root = FXMLLoader.load(getClass().getResource("/fxml/opening.fxml"));
+            stage.setTitle("Minesweeper");
+            stage.setResizable(false);
+            stage.setScene(new Scene(root));
+            stage.show();*/
         }
     }
 
